@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080c"/>
+      <stop offset="100%" stop-color="#0d1a22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#43b5d0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#43b5d0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="48" y="48" width="4" height="80" fill="#43b5d0"/>
+  <text x="72" y="100" fill="#43b5d0" font-family="system-ui,sans-serif" font-size="22" font-weight="600" letter-spacing="6">PORTFOLIO &amp; CV</text>
+  <text x="72" y="200" fill="#f0f0f5" font-family="system-ui,sans-serif" font-size="64" font-weight="700">Fernando Rodríguez</text>
+  <text x="72" y="270" fill="#f0f0f5" font-family="system-ui,sans-serif" font-size="64" font-weight="500">Prianti</text>
+  <text x="72" y="340" fill="#43b5d0" font-family="system-ui,sans-serif" font-size="32" font-weight="500">Ingeniero de Software · Full Stack</text>
+  <text x="72" y="400" fill="#a0a0b0" font-family="system-ui,sans-serif" font-size="24">Android · Web · IA local · Xalapa, MX</text>
+  <text x="72" y="560" fill="#6b6b7b" font-family="monospace" font-size="20">fernandorp-nan.github.io/fernando-cv</text>
+  <circle cx="1050" cy="120" r="90" fill="none" stroke="#43b5d0" stroke-width="2" opacity="0.4"/>
+  <text x="1050" y="132" text-anchor="middle" fill="#43b5d0" font-family="system-ui,sans-serif" font-size="48" font-weight="700">FR</text>
+</svg>

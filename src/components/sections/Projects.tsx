@@ -1,5 +1,6 @@
 import { useLanguage } from '../../i18n/LanguageProvider';
 import { useProjectFilter } from '../../hooks/useProjectFilter';
+import { FeaturedProjects } from './FeaturedProjects';
 import { FilterPills } from '../ui/FilterPills';
 import { ProjectCard } from '../ui/ProjectCard';
 import { SectionTitle } from '../ui/SectionTitle';
@@ -13,6 +14,8 @@ export function Projects() {
   return (
     <section className={styles.section} id="proyectos">
       <SectionTitle index="04" title={projects.title} subtitle={projects.subtitle} />
+
+      {category === 'all' && <FeaturedProjects />}
 
       <FilterPills active={category} counts={counts} onChange={setCategory} />
 

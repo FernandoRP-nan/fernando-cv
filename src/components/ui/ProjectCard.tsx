@@ -7,19 +7,29 @@ import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
   project: Project;
+  compact?: boolean;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, compact = false }: ProjectCardProps) {
   const { t } = useLanguage();
   const labels = t.sections.projects;
   const primaryCategory = project.categories[0];
   const accent = CATEGORY_ACCENTS[primaryCategory] ?? '#f0f0f5';
+  const imageSrc = project.imageUrl
+    ? `${import.meta.env.BASE_URL}${project.imageUrl.replace(/^\//, '')}`
+    : null;
 
   return (
     <article
-      className={`${styles.card} ${project.featured ? styles.featured : ''}`}
+      className={`${styles.card} ${project.featured && !compact ? styles.featured : ''} ${compact ? styles.compact : ''}`}
       style={{ '--card-accent': accent } as CSSProperties}
     >
+      {imageSrc && (
+        <div className={styles.thumb}>
+          <img src={imageSrc} alt="" loading="lazy" decoding="async" />
+        </div>
+      )}
+
       <div className={styles.header}>
         <div className={styles.meta}>
           {project.categories.map((cat) => (
@@ -30,35 +40,39 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.visibility === 'private' && (
             <Chip accent="#fbbf24">{t.visibility.private}</Chip>
           )}
-          <span className={styles.status}>{t.status[project.status]}</span>
+          {!compact && <span className={styles.status}>{t.status[project.status]}</span>}
         </div>
         <h3 className={styles.title}>{project.title}</h3>
         {project.period && <p className={styles.period}>{project.period}</p>}
         <p className={styles.description}>{project.description}</p>
       </div>
 
-      <div className={styles.section}>
-        <span className={styles.label}>{labels.techLabel}</span>
-        <div className={styles.tags}>
-          {project.technologies.map((tech) => (
-            <span key={tech} className={styles.tag}>
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {project.patterns.length > 0 && (
-        <div className={styles.section}>
-          <span className={styles.label}>{labels.patternsLabel}</span>
-          <div className={styles.tags}>
-            {project.patterns.map((pattern) => (
-              <span key={pattern} className={`${styles.tag} ${styles.pattern}`}>
-                {pattern}
-              </span>
-            ))}
+      {!compact && (
+        <>
+          <div className={styles.section}>
+            <span className={styles.label}>{labels.techLabel}</span>
+            <div className={styles.tags}>
+              {project.technologies.map((tech) => (
+                <span key={tech} className={styles.tag}>
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+
+          {project.patterns.length > 0 && (
+            <div className={styles.section}>
+              <span className={styles.label}>{labels.patternsLabel}</span>
+              <div className={styles.tags}>
+                {project.patterns.map((pattern) => (
+                  <span key={pattern} className={`${styles.tag} ${styles.pattern}`}>
+                    {pattern}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
       )}
 
       {(project.repoUrl || project.demoUrl) && (

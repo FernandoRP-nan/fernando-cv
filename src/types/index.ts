@@ -53,6 +53,8 @@ export interface Project {
   patterns: string[];
   repoUrl?: string;
   demoUrl?: string;
+  /** Ruta bajo public/, p. ej. /images/pokedex.webp */
+  imageUrl?: string;
   visibility?: 'public' | 'private';
   featured: boolean;
   status: 'production' | 'active' | 'archived' | 'learning';

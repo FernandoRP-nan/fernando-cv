@@ -10,6 +10,7 @@ export const en: LocaleStrings = {
   ],
   hero: {
     eyebrow: 'Portfolio & CV',
+    available: 'Available · Remote / hybrid',
     role: 'Software Engineer · Full Stack',
     summary:
       'Engineer with 4+ years in web and mobile. Production PWAs, Android with Compose, and Stripe, FCM, and WebSocket integrations.',
@@ -18,8 +19,8 @@ export const en: LocaleStrings = {
     ctaPdf: 'Download CV (PDF)',
     stats: [
       { value: '4+', label: 'Years of experience' },
-      { value: '14', label: 'Portfolio projects' },
-      { value: '7', label: 'Stack areas' },
+      { value: '3', label: 'Production apps' },
+      { value: '13', label: 'Months on live PWA' },
     ],
     orbit: ['Kotlin', 'Angular', 'Godot', 'Python'],
   },
@@ -48,6 +49,7 @@ export const en: LocaleStrings = {
     projects: {
       title: 'Projects',
       subtitle: 'Filter by category. Dates show active time or time in production.',
+      featuredTitle: 'Highlights',
       empty: 'No projects in this category.',
       techLabel: 'Technologies',
       patternsLabel: 'Patterns',
@@ -78,6 +80,7 @@ export const en: LocaleStrings = {
     tools: 'Tools',
     patterns: 'Patterns',
   },
+  highlightProjectIds: ['pokedex', 'gallery-ayn', 'ia-obsidian'],
   profile: {
     name: 'Fernando Rodríguez Prianti',
     role: 'Software Engineer · Full Stack',
@@ -99,7 +102,7 @@ export const en: LocaleStrings = {
     ],
     languages: [
       { name: 'Spanish', level: 'Native' },
-      { name: 'English', level: 'A2' },
+      { name: 'English', level: 'A2 — technical reading & docs' },
     ],
     softSkills: [
       'Teamwork',
@@ -199,6 +202,7 @@ export const en: LocaleStrings = {
       categories: ['android'],
       technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Retrofit'],
       patterns: ['MVVM', 'Repository'],
+      imageUrl: 'images/pokedex.svg',
       repoUrl: 'https://github.com/FernandoRP-nan/Pokedex',
       featured: true,
       status: 'production',
@@ -269,6 +273,7 @@ export const en: LocaleStrings = {
       categories: ['web', 'tools'],
       technologies: ['Python', 'Svelte', 'TypeScript', 'Vite'],
       patterns: ['Component-driven', 'Desktop Bridge'],
+      imageUrl: 'images/gallery-ayn.svg',
       repoUrl: 'https://github.com/FernandoRP-nan/Gallery-AYN',
       featured: true,
       status: 'production',
@@ -330,6 +335,7 @@ export const en: LocaleStrings = {
       categories: ['ai', 'tools'],
       technologies: ['Python', 'LangGraph', 'Ollama', 'ChromaDB', 'Docker'],
       patterns: ['RAG', 'Pipeline'],
+      imageUrl: 'images/ia-obsidian.svg',
       repoUrl: 'https://github.com/FernandoRP-nan/IA-Obsidian-Manager',
       featured: true,
       status: 'active',

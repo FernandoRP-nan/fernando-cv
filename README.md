@@ -8,21 +8,23 @@ Portfolio y currículum web modular, desplegado en GitHub Pages.
 
 - React 19 + TypeScript
 - Vite 8
-- CSS Modules (sin frameworks UI genéricos)
-- GitHub Actions → GitHub Pages
+- CSS Modules
+- i18n ES/EN
+- GitHub Actions → GitHub Pages + PDF LaTeX (Tectonic)
 
 ## Arquitectura
 
 ```
 src/
-├── data/          # Contenido del CV (profile, experience, skills, projects)
+├── i18n/          # Contenido ES/EN (profile, projects, skills…)
 ├── types/         # Interfaces compartidas
-├── hooks/         # Lógica reutilizable (filtros)
+├── hooks/         # Filtros, meta SEO
 ├── components/
-│   ├── layout/    # Header, Footer
+│   ├── layout/    # Header, Footer, MobileNav
 │   ├── sections/  # Secciones del CV
 │   └── ui/        # Componentes atómicos
-└── styles/        # Tokens y estilos globales
+├── cv/            # Fuentes LaTeX (PDF generado en CI)
+└── public/        # OG image, manifest, imágenes de proyectos
 ```
 
 ## Desarrollo local
@@ -32,27 +34,22 @@ npm install
 npm run dev
 ```
 
-## Despliegue
-
-1. Crear repo `fernando-cv` en GitHub
-2. Push de la rama `main`
-3. En **Settings → Pages → Build and deployment**, seleccionar **GitHub Actions**
-4. El workflow `.github/workflows/deploy.yml` publica automáticamente
-
-Despliegue manual alternativo:
-
-```bash
-npm run deploy
-```
-
 ## Agregar proyectos
 
-Edita `src/data/projects.ts`. Cada proyecto incluye:
+Edita `src/i18n/es.ts` y `src/i18n/en.ts`. Campos útiles:
 
-- `categories`: `android` | `web` | `games` | `ai` | `tools` | `patterns`
-- `technologies`: stack usado
-- `patterns`: MVVM, Clean Code, etc.
-- `featured`: destaca en grid amplio
+- `imageUrl`: ruta bajo `public/` (ej. `images/mi-proyecto.webp`)
+- `featured`: tarjeta ancha en grid
+- `highlightProjectIds`: fila de destacados arriba del filtro
+
+## PDF local
+
+```bash
+# Requiere tectonic
+cd cv && tectonic -X compile main.tex --outdir ../public/cv
+```
+
+En CI se genera automáticamente al push en `main`.
 
 ## Licencia
 

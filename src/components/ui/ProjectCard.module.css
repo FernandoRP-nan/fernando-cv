@@ -23,6 +23,51 @@
   grid-column: span 1;
 }
 
+.compact {
+  padding: 1rem;
+}
+
+.compact .description {
+  font-size: 0.88rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.compact .title {
+  font-size: 1.1rem;
+}
+
+.thumb {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: color-mix(in srgb, var(--card-accent) 8%, var(--bg));
+  border-bottom: 1px solid var(--border);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card:has(.thumb) .header,
+.card:has(.thumb) .section,
+.card:has(.thumb) .links {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.card:has(.thumb) {
+  padding: 0 0 1.25rem;
+}
+
+.card:has(.thumb) .header {
+  padding-top: 1.25rem;
+}
+
 @media (min-width: 900px) {
   .featured {
     grid-column: span 2;

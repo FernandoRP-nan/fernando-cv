@@ -1,4 +1,5 @@
 import { useLanguage } from '../../i18n/LanguageProvider';
+import { usePageMeta } from '../../hooks/usePageMeta';
 import styles from './Hero.module.css';
 
 const PDF_PATHS = {
@@ -8,6 +9,8 @@ const PDF_PATHS = {
 
 export function Hero() {
   const { locale, t } = useLanguage();
+  usePageMeta(locale, t);
+
   const initials = t.profile.name
     .split(' ')
     .map((part) => part[0])
@@ -17,7 +20,10 @@ export function Hero() {
   return (
     <section className={styles.hero} id="inicio">
       <div className={styles.content}>
-        <p className={styles.eyebrow}>{t.hero.eyebrow}</p>
+        <div className={styles.badges}>
+          <p className={styles.eyebrow}>{t.hero.eyebrow}</p>
+          <span className={styles.available}>{t.hero.available}</span>
+        </div>
         <h1 className={styles.name}>
           Fernando
           <span className={styles.surname}> Rodríguez Prianti</span>

@@ -6,6 +6,7 @@ export interface LocaleStrings {
   nav: { href: string; label: string }[];
   hero: {
     eyebrow: string;
+    available: string;
     role: string;
     summary: string;
     ctaProjects: string;
@@ -18,13 +19,14 @@ export interface LocaleStrings {
     about: { title: string; subtitle: string; summary: string; focus: string; objective: string; education: string; languages: string; softSkills: string; degree: string; institution: string; period: string };
     experience: { title: string; subtitle: string };
     skills: { title: string; subtitle: string };
-    projects: { title: string; subtitle: string; empty: string; techLabel: string; patternsLabel: string; repoLink: string; demoLink: string; requestDemo: string };
+    projects: { title: string; subtitle: string; featuredTitle: string; empty: string; techLabel: string; patternsLabel: string; repoLink: string; demoLink: string; requestDemo: string };
     contact: { eyebrow: string; title: string; body: string };
   };
   footer: { made: string };
   status: Record<'production' | 'active' | 'archived' | 'learning', string>;
   visibility: { private: string };
   categories: Record<ProjectCategory, string>;
+  highlightProjectIds: string[];
   profile: {
     name: string;
     role: string;
@@ -59,6 +61,7 @@ export interface LocaleStrings {
     patterns: string[];
     repoUrl?: string;
     demoUrl?: string;
+    imageUrl?: string;
     visibility?: 'public' | 'private';
     featured: boolean;
     status: 'production' | 'active' | 'archived' | 'learning';
