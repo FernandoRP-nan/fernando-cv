@@ -13,12 +13,12 @@ export const en: LocaleStrings = {
     available: 'Available · Remote / hybrid',
     role: 'Software Engineer · Full Stack',
     summary:
-      'Engineer with 4+ years in web and mobile. Production PWAs, Android with Compose, and Stripe, FCM, and WebSocket integrations.',
+      'Engineer with 3+ years in web and mobile. Production PWAs, Android with Compose, and Stripe, FCM, and WebSocket integrations.',
     ctaProjects: 'View projects',
     ctaContact: 'Contact',
     ctaPdf: 'Download CV (PDF)',
     stats: [
-      { value: '4+', label: 'Years of experience' },
+      { value: '3+', label: 'Years of experience' },
       { value: '3', label: 'Production apps' },
       { value: '13', label: 'Months on live PWA' },
     ],
@@ -90,7 +90,7 @@ export const en: LocaleStrings = {
     linkedin: 'https://www.linkedin.com/in/fernando-rodríguez-732670140/',
     github: 'https://github.com/FernandoRP-nan',
     summary:
-      'Software Engineer with 4+ years in web and mobile. Production PWAs and portals (Angular, Laravel), Android apps with Jetpack Compose, and multi-repo ecosystems. Experience with Stripe payments, JWT/RBAC auth, FCM push, WebSockets, and Docker. Side projects with Python, Godot, Obsidian plugins, and local RAG (LangGraph + Ollama).',
+      'Software Engineer with 3+ years in web and mobile. Production PWAs and portals (Angular, Laravel), Android apps with Jetpack Compose, and multi-repo ecosystems. Experience with Stripe payments, JWT/RBAC auth, FCM push, WebSockets, and Docker. Side projects with Python, Godot, Obsidian plugins, and local RAG (LangGraph + Ollama).',
     objective:
       'Join multidisciplinary teams contributing on full stack or Android, prioritizing maintainable code and impactful delivery.',
     focusAreas: [
@@ -139,7 +139,7 @@ export const en: LocaleStrings = {
       company: 'Satori Tech',
       role: 'Jr. Android Developer',
       location: 'Mecatepec, CDMX',
-      period: 'SEP 2022 — JUN 2024 · 22 months',
+      period: 'SEP 2021 — JUN 2024 · 33 months',
       tags: ['Kotlin', 'MVVM', 'Retrofit', 'Room'],
       highlights: [
         'Mobile apps with API consumption in Scrum.',
@@ -151,9 +151,9 @@ export const en: LocaleStrings = {
       company: 'Grupo Modelo',
       role: 'SAP PI PO Jr. Consultant (Freelance)',
       location: 'Xalapa, Veracruz',
-      period: 'JUN 2022 — AUG 2022 · 3 months',
+      period: 'JUN 2022 — AUG 2022 · 3 months · concurrent with Satori Tech',
       tags: ['SAP ERP'],
-      highlights: ['Support and maintenance on SAP ERP.'],
+      highlights: ['SAP ERP support and maintenance while continuing at Satori Tech.'],
     },
   ],
   skillGroups: [
