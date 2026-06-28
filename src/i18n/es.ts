@@ -265,6 +265,32 @@ export const es: LocaleStrings = {
       status: 'active',
     },
     {
+      id: 'templete-banco',
+      title: 'Plantilla bancaria Android',
+      description:
+        'App fintech demo con Marco-Antonio-AH: auth JWT, dashboard, movimientos paginados, biometría y backend simulado.',
+      period: '2026 · colaboración',
+      categories: ['android'],
+      technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Paging', 'Retrofit', 'Biometric'],
+      patterns: ['Clean Architecture', 'MVVM', 'Repository'],
+      repoUrl: 'https://github.com/FernandoRP-nan/templete_banco',
+      featured: false,
+      status: 'active',
+    },
+    {
+      id: 'android-template',
+      title: 'Android Template',
+      description:
+        'Plantilla Compose con Marco-Antonio-AH: TMDB, Room, Hilt y módulo JNI para claves; feature cafetería con animaciones.',
+      period: '2026 · colaboración',
+      categories: ['android'],
+      technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Retrofit', 'NDK', 'Coil'],
+      patterns: ['Clean Architecture', 'MVVM', 'Repository'],
+      repoUrl: 'https://github.com/FernandoRP-nan/android-template',
+      featured: false,
+      status: 'active',
+    },
+    {
       id: 'gallery-ayn',
       title: 'Gallery AYN',
       description: 'Escritorio Python + UI Svelte: galería, organizador y video.',
