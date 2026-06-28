@@ -94,10 +94,10 @@ export const en: LocaleStrings = {
     objective:
       'Join multidisciplinary teams contributing on full stack or Android, prioritizing maintainable code and impactful delivery.',
     focusAreas: [
-      'Full stack web — Angular, Laravel, Node.js, React',
-      'Android — Kotlin, Compose, MVVM, Hilt, Room, Retrofit',
-      'Integrations — Stripe, Firebase FCM, REST, WebSockets',
-      'Light DevOps — Docker, GitHub Actions, deployments',
+      'Full stack web — Angular, Laravel, Node.js, React, PWA',
+      'Android — Compose, Hilt, Room, Retrofit, Paging, MVVM',
+      'Integrations — Stripe, Firebase FCM, REST, WebSockets, JWT',
+      'Light DevOps — Docker, GitHub Actions, Gradle, Vite',
       'Local AI — LangGraph, Ollama, ChromaDB, RAG',
     ],
     languages: [
@@ -160,37 +160,51 @@ export const en: LocaleStrings = {
     {
       id: 'languages',
       title: 'Languages',
-      items: ['Java', 'Kotlin', 'Python', 'C#', 'JavaScript', 'TypeScript', 'PHP', 'GDScript'],
+      items: ['Java', 'Kotlin', 'Python', 'JavaScript', 'TypeScript', 'PHP', 'GDScript', 'C++'],
     },
     {
       id: 'frameworks',
       title: 'Frameworks & runtimes',
-      items: ['Angular', 'Laravel', 'React', 'Node.js', 'Express', 'Jetpack Compose', 'Spring Boot', 'Svelte', 'Godot'],
+      items: ['Angular', 'Laravel', 'React', 'Node.js', 'Express', 'Spring Boot', 'Svelte', 'Godot', 'PWA'],
+    },
+    {
+      id: 'android',
+      title: 'Android',
+      items: ['Jetpack Compose', 'Hilt', 'Room', 'Retrofit', 'Paging', 'Coil', 'NDK', 'Biometric'],
     },
     {
       id: 'databases',
       title: 'Databases',
-      items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Room', 'CouchDB'],
+      items: ['MySQL', 'SQLite', 'CouchDB'],
     },
     {
       id: 'integrations',
       title: 'Integrations',
-      items: ['Stripe', 'Firebase FCM', 'WebSockets', 'REST API', 'JWT', 'Obsidian API'],
+      items: ['Stripe', 'Firebase FCM', 'WebSockets', 'REST API', 'JWT', 'Obsidian API', 'SAP ERP'],
     },
     {
       id: 'practices',
       title: 'Architecture & practices',
-      items: ['MVVM', 'Clean Architecture', 'Repository', 'Dependency injection', 'Design patterns', 'Event-driven'],
+      items: [
+        'MVVM',
+        'Clean Architecture',
+        'Repository',
+        'Dependency injection',
+        'RBAC',
+        'Offline-first paging',
+        'Design patterns',
+        'Event-driven',
+      ],
     },
     {
       id: 'tools',
       title: 'Tools & DevOps',
-      items: ['Git', 'GitHub Actions', 'Docker', 'Android Studio', 'VS Code', 'IntelliJ', 'Vite', 'Gradle', 'Figma'],
+      items: ['Git', 'GitHub Actions', 'Docker', 'Android Studio', 'VS Code', 'Gradle', 'Vite'],
     },
     {
       id: 'ai',
       title: 'AI & automation',
-      items: ['LangGraph', 'Ollama', 'ChromaDB', 'RAG', 'LangChain'],
+      items: ['LangGraph', 'Ollama', 'ChromaDB', 'RAG'],
     },
   ],
   projects: [

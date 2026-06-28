@@ -94,10 +94,10 @@ export const es: LocaleStrings = {
     objective:
       'Integrarme a equipos multidisciplinarios donde pueda aportar en full stack o Android, priorizando código mantenible y entregas con impacto.',
     focusAreas: [
-      'Full stack web — Angular, Laravel, Node.js, React',
-      'Android — Kotlin, Compose, MVVM, Hilt, Room, Retrofit',
-      'Integraciones — Stripe, Firebase FCM, REST, WebSockets',
-      'DevOps ligero — Docker, GitHub Actions, despliegues',
+      'Full stack web — Angular, Laravel, Node.js, React, PWA',
+      'Android — Compose, Hilt, Room, Retrofit, Paging, MVVM',
+      'Integraciones — Stripe, Firebase FCM, REST, WebSockets, JWT',
+      'DevOps ligero — Docker, GitHub Actions, Gradle, Vite',
       'IA local — LangGraph, Ollama, ChromaDB, RAG',
     ],
     languages: [
@@ -160,37 +160,51 @@ export const es: LocaleStrings = {
     {
       id: 'languages',
       title: 'Lenguajes',
-      items: ['Java', 'Kotlin', 'Python', 'C#', 'JavaScript', 'TypeScript', 'PHP', 'GDScript'],
+      items: ['Java', 'Kotlin', 'Python', 'JavaScript', 'TypeScript', 'PHP', 'GDScript', 'C++'],
     },
     {
       id: 'frameworks',
       title: 'Frameworks & runtimes',
-      items: ['Angular', 'Laravel', 'React', 'Node.js', 'Express', 'Jetpack Compose', 'Spring Boot', 'Svelte', 'Godot'],
+      items: ['Angular', 'Laravel', 'React', 'Node.js', 'Express', 'Spring Boot', 'Svelte', 'Godot', 'PWA'],
+    },
+    {
+      id: 'android',
+      title: 'Android',
+      items: ['Jetpack Compose', 'Hilt', 'Room', 'Retrofit', 'Paging', 'Coil', 'NDK', 'Biometric'],
     },
     {
       id: 'databases',
       title: 'Bases de datos',
-      items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Room', 'CouchDB'],
+      items: ['MySQL', 'SQLite', 'CouchDB'],
     },
     {
       id: 'integrations',
       title: 'Integraciones',
-      items: ['Stripe', 'Firebase FCM', 'WebSockets', 'REST API', 'JWT', 'Obsidian API'],
+      items: ['Stripe', 'Firebase FCM', 'WebSockets', 'REST API', 'JWT', 'Obsidian API', 'SAP ERP'],
     },
     {
       id: 'practices',
       title: 'Arquitectura & prácticas',
-      items: ['MVVM', 'Clean Architecture', 'Repository', 'Inyección de dependencias', 'Patrones de diseño', 'Event-driven'],
+      items: [
+        'MVVM',
+        'Clean Architecture',
+        'Repository',
+        'Inyección de dependencias',
+        'RBAC',
+        'Paging offline-first',
+        'Patrones de diseño',
+        'Event-driven',
+      ],
     },
     {
       id: 'tools',
       title: 'Herramientas & DevOps',
-      items: ['Git', 'GitHub Actions', 'Docker', 'Android Studio', 'VS Code', 'IntelliJ', 'Vite', 'Gradle', 'Figma'],
+      items: ['Git', 'GitHub Actions', 'Docker', 'Android Studio', 'VS Code', 'Gradle', 'Vite'],
     },
     {
       id: 'ai',
       title: 'IA & automatización',
-      items: ['LangGraph', 'Ollama', 'ChromaDB', 'RAG', 'LangChain'],
+      items: ['LangGraph', 'Ollama', 'ChromaDB', 'RAG'],
     },
   ],
   projects: [
