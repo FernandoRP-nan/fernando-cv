@@ -266,10 +266,10 @@ export const es: LocaleStrings = {
     },
     {
       id: 'templete-banco',
-      title: 'Plantilla bancaria Android',
+      title: 'Uno Bank',
       description:
-        'App fintech demo con Marco-Antonio-AH: auth JWT, dashboard, movimientos paginados, biometría y backend simulado.',
-      period: '2026 · colaboración',
+        'App móvil fintech: auth JWT, dashboard, movimientos paginados, biometría y capa de seguridad con backend simulado.',
+      period: '2026 · activo',
       categories: ['android'],
       technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Paging', 'Retrofit', 'Biometric'],
       patterns: ['Clean Architecture', 'MVVM', 'Repository'],
@@ -279,10 +279,10 @@ export const es: LocaleStrings = {
     },
     {
       id: 'android-template',
-      title: 'Android Template',
+      title: 'Cero — Películas & Compose',
       description:
-        'Plantilla Compose con Marco-Antonio-AH: TMDB, Room, Hilt y módulo JNI para claves; feature cafetería con animaciones.',
-      period: '2026 · colaboración',
+        'App Android modular: catálogo TMDB, Room, Hilt y módulo NDK; UI interactiva de pedidos con animaciones Compose.',
+      period: '2026 · activo',
       categories: ['android'],
       technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Retrofit', 'NDK', 'Coil'],
       patterns: ['Clean Architecture', 'MVVM', 'Repository'],
