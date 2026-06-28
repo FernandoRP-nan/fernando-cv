@@ -1,0 +1,19 @@
+.footer {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.made {
+  font-family: var(--font-mono);
+  font-size: 0.7rem !important;
+  letter-spacing: 0.06em;
+}

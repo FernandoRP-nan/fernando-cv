@@ -1,0 +1,74 @@
+.section {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.card p,
+.card li {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.degree {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+
+.meta {
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+}
+
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.softList {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 0.5rem !important;
+}
+
+@media (min-width: 600px) {
+  .softList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.softList li::before {
+  content: '→ ';
+  color: var(--accent);
+}

@@ -1,0 +1,118 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--card-accent) 6%, var(--surface)) 0%,
+    var(--surface) 60%
+  );
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--card-accent) 40%, var(--border));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.featured {
+  grid-column: span 1;
+}
+
+@media (min-width: 900px) {
+  .featured {
+    grid-column: span 2;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.status {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.pattern {
+  border-color: color-mix(in srgb, var(--card-accent) 30%, var(--border));
+  color: color-mix(in srgb, var(--card-accent) 80%, white);
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--card-accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
