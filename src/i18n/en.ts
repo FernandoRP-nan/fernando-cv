@@ -12,21 +12,23 @@ export const en: LocaleStrings = {
     eyebrow: 'Portfolio & CV',
     role: 'Software Engineer · Full Stack',
     summary:
-      'Web and mobile development with Angular, Laravel, Node.js, React, and Jetpack Compose. Focus on MVVM, secure APIs, and production delivery.',
+      'Engineer with 4+ years in web and mobile. Production PWAs, Android with Compose, and Stripe, FCM, and WebSocket integrations.',
     ctaProjects: 'View projects',
     ctaContact: 'Contact',
     ctaPdf: 'Download CV (PDF)',
     stats: [
       { value: '4+', label: 'Years of experience' },
       { value: '12', label: 'Portfolio projects' },
-      { value: '8', label: 'Core technologies' },
+      { value: '7', label: 'Stack areas' },
     ],
     orbit: ['Kotlin', 'Angular', 'Godot', 'Python'],
   },
   sections: {
     about: {
       title: 'Profile',
-      subtitle: 'Education, objective, and languages.',
+      subtitle: 'Background, specialization, and education.',
+      summary: 'Summary',
+      focus: 'Specialization',
       objective: 'Objective',
       education: 'Education',
       languages: 'Languages',
@@ -41,7 +43,7 @@ export const en: LocaleStrings = {
     },
     skills: {
       title: 'Technical stack',
-      subtitle: 'Technologies I use in production and personal projects.',
+      subtitle: 'Languages, frameworks, integrations, and tools used in production and side projects.',
     },
     projects: {
       title: 'Projects',
@@ -85,9 +87,16 @@ export const en: LocaleStrings = {
     linkedin: 'https://www.linkedin.com/in/fernando-rodriguez-732670140/',
     github: 'https://github.com/FernandoRP-nan',
     summary:
-      'Web and mobile development with Angular, Laravel, Node.js, React, and Jetpack Compose. Focus on MVVM, secure APIs, and production delivery.',
+      'Software Engineer with 4+ years in web and mobile. Production PWAs and portals (Angular, Laravel), Android apps with Jetpack Compose, and multi-repo ecosystems. Experience with Stripe payments, JWT/RBAC auth, FCM push, WebSockets, and Docker. Side projects with Python, Godot, Obsidian plugins, and local RAG (LangGraph + Ollama).',
     objective:
-      'Join multidisciplinary teams to lead solutions that improve user experience.',
+      'Join multidisciplinary teams contributing on full stack or Android, prioritizing maintainable code and impactful delivery.',
+    focusAreas: [
+      'Full stack web — Angular, Laravel, Node.js, React',
+      'Android — Kotlin, Compose, MVVM, Hilt, Room, Retrofit',
+      'Integrations — Stripe, Firebase FCM, REST, WebSockets',
+      'Light DevOps — Docker, GitHub Actions, deployments',
+      'Local AI — LangGraph, Ollama, ChromaDB, RAG',
+    ],
     languages: [
       { name: 'Spanish', level: 'Native' },
       { name: 'English', level: 'A2' },
@@ -104,11 +113,11 @@ export const en: LocaleStrings = {
       id: 'tierra-de-perros',
       company: 'Tierra de Perros',
       location: 'Xalapa, Veracruz',
-      period: 'DEC 2024 — JUN 2025 · 7 months · contract ended',
-      tags: ['Angular', 'Laravel', 'PWA', 'Stripe'],
+      period: 'DEC 2024 — DEC 2025 · 13 months · contract ended',
+      tags: ['Angular', 'Laravel', 'PWA', 'Stripe', 'WebSockets', 'FCM'],
       highlights: [
-        'PWA with admin, client, and worker roles.',
-        'Platform still live; no active contract since Jun 2025.',
+        'PWA with admin, client, and worker roles; appointments, store, and Stripe payments.',
+        'WebSocket chat, FCM push, and JWT. Platform still live; contract ended Dec 2025.',
       ],
     },
     {
@@ -145,12 +154,41 @@ export const en: LocaleStrings = {
     },
   ],
   skillGroups: [
-    { id: 'languages', title: 'Languages', items: ['Java', 'Kotlin', 'Python', 'C#', 'JavaScript', 'TypeScript', 'PHP'] },
-    { id: 'frameworks', title: 'Frameworks', items: ['Angular', 'Laravel', 'React', 'Jetpack Compose', 'Spring Boot', 'Node.js', 'Godot'] },
-    { id: 'databases', title: 'Databases', items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Room', 'CouchDB'] },
-    { id: 'practices', title: 'Practices', items: ['MVVM', 'Clean Code', 'Dependency injection', 'Design patterns', 'REST API'] },
-    { id: 'tools', title: 'Tools', items: ['Android Studio', 'VS Code', 'Git', 'Docker', 'Figma', 'IntelliJ'] },
-    { id: 'security', title: 'Security', items: ['JWT', 'RBAC', 'Encryption', 'Tokenization'] },
+    {
+      id: 'languages',
+      title: 'Languages',
+      items: ['Java', 'Kotlin', 'Python', 'C#', 'JavaScript', 'TypeScript', 'PHP', 'GDScript'],
+    },
+    {
+      id: 'frameworks',
+      title: 'Frameworks & runtimes',
+      items: ['Angular', 'Laravel', 'React', 'Node.js', 'Express', 'Jetpack Compose', 'Spring Boot', 'Svelte', 'Godot'],
+    },
+    {
+      id: 'databases',
+      title: 'Databases',
+      items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Room', 'CouchDB'],
+    },
+    {
+      id: 'integrations',
+      title: 'Integrations',
+      items: ['Stripe', 'Firebase FCM', 'WebSockets', 'REST API', 'JWT', 'Obsidian API'],
+    },
+    {
+      id: 'practices',
+      title: 'Architecture & practices',
+      items: ['MVVM', 'Clean Architecture', 'Repository', 'Dependency injection', 'Design patterns', 'Event-driven'],
+    },
+    {
+      id: 'tools',
+      title: 'Tools & DevOps',
+      items: ['Git', 'GitHub Actions', 'Docker', 'Android Studio', 'VS Code', 'IntelliJ', 'Vite', 'Gradle', 'Figma'],
+    },
+    {
+      id: 'ai',
+      title: 'AI & automation',
+      items: ['LangGraph', 'Ollama', 'ChromaDB', 'RAG', 'LangChain'],
+    },
   ],
   projects: [
     {
@@ -168,10 +206,10 @@ export const en: LocaleStrings = {
     {
       id: 'tierra-de-perros',
       title: 'Tierra de Perros',
-      description: 'Delivered PWA: appointments, store, Stripe, roles. Angular + Laravel. Still in production.',
-      period: '2024–2025 · 7 months · delivered',
+      description: 'Delivered PWA: appointments, store, Stripe, chat, and roles. Angular + Laravel. Still in production.',
+      period: '2024–2025 · 13 months · delivered',
       categories: ['web'],
-      technologies: ['Angular', 'Laravel', 'Stripe', 'MySQL', 'FCM'],
+      technologies: ['Angular', 'Laravel', 'Stripe', 'MySQL', 'FCM', 'WebSockets'],
       patterns: ['RBAC', 'JWT', 'WebSockets'],
       featured: true,
       status: 'production',

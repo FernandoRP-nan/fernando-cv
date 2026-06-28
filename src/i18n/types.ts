@@ -15,7 +15,7 @@ export interface LocaleStrings {
     orbit: string[];
   };
   sections: {
-    about: { title: string; subtitle: string; objective: string; education: string; languages: string; softSkills: string; degree: string; institution: string; period: string };
+    about: { title: string; subtitle: string; summary: string; focus: string; objective: string; education: string; languages: string; softSkills: string; degree: string; institution: string; period: string };
     experience: { title: string; subtitle: string };
     skills: { title: string; subtitle: string };
     projects: { title: string; subtitle: string; empty: string; techLabel: string; patternsLabel: string; repoLink: string; demoLink: string; requestDemo: string };
@@ -35,6 +35,7 @@ export interface LocaleStrings {
     github: string;
     summary: string;
     objective: string;
+    focusAreas: string[];
     languages: { name: string; level: string }[];
     softSkills: string[];
   };

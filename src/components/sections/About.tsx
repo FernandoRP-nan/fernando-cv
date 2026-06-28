@@ -11,6 +11,20 @@ export function About() {
       <SectionTitle index="01" title={about.title} subtitle={about.subtitle} />
 
       <div className={styles.grid}>
+        <article className={`${styles.card} ${styles.wide}`}>
+          <h3>{about.summary}</h3>
+          <p>{t.profile.summary}</p>
+        </article>
+
+        <article className={styles.card}>
+          <h3>{about.focus}</h3>
+          <ul className={styles.focusList}>
+            {t.profile.focusAreas.map((area) => (
+              <li key={area}>{area}</li>
+            ))}
+          </ul>
+        </article>
+
         <article className={styles.card}>
           <h3>{about.objective}</h3>
           <p>{t.profile.objective}</p>

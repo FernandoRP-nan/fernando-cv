@@ -12,21 +12,23 @@ export const es: LocaleStrings = {
     eyebrow: 'Portfolio & CV',
     role: 'Ingeniero de Software · Full Stack',
     summary:
-      'Desarrollo web y móvil con Angular, Laravel, Node.js, React y Jetpack Compose. Enfoque en MVVM, APIs seguras y entrega en producción.',
+      'Ingeniero con 4+ años en web y móvil. PWAs en producción, Android con Compose e integraciones Stripe, FCM y WebSockets.',
     ctaProjects: 'Ver proyectos',
     ctaContact: 'Contactar',
     ctaPdf: 'Descargar CV (PDF)',
     stats: [
       { value: '4+', label: 'Años de experiencia' },
       { value: '12', label: 'Proyectos en portfolio' },
-      { value: '8', label: 'Tecnologías core' },
+      { value: '7', label: 'Áreas de stack' },
     ],
     orbit: ['Kotlin', 'Angular', 'Godot', 'Python'],
   },
   sections: {
     about: {
       title: 'Perfil',
-      subtitle: 'Formación, objetivo e idiomas.',
+      subtitle: 'Trayectoria, especialización y formación.',
+      summary: 'Resumen',
+      focus: 'Especialización',
       objective: 'Objetivo',
       education: 'Educación',
       languages: 'Idiomas',
@@ -41,7 +43,7 @@ export const es: LocaleStrings = {
     },
     skills: {
       title: 'Stack técnico',
-      subtitle: 'Tecnologías que uso en producción y proyectos personales.',
+      subtitle: 'Lenguajes, frameworks, integraciones y herramientas usadas en producción y side projects.',
     },
     projects: {
       title: 'Proyectos',
@@ -85,9 +87,16 @@ export const es: LocaleStrings = {
     linkedin: 'https://www.linkedin.com/in/fernando-rodriguez-732670140/',
     github: 'https://github.com/FernandoRP-nan',
     summary:
-      'Desarrollo web y móvil con Angular, Laravel, Node.js, React y Jetpack Compose. Enfoque en MVVM, APIs seguras y entrega en producción.',
+      'Ingeniero de Software con 4+ años en web y móvil. PWAs y portales en producción (Angular, Laravel), apps Android con Jetpack Compose y ecosistemas multi-repo. Experiencia en pagos Stripe, auth JWT/RBAC, push FCM, WebSockets y Docker. Side projects con Python, Godot, plugins Obsidian y RAG local (LangGraph + Ollama).',
     objective:
-      'Integrarme a equipos multidisciplinarios para liderar soluciones que mejoren la experiencia del usuario.',
+      'Integrarme a equipos multidisciplinarios donde pueda aportar en full stack o Android, priorizando código mantenible y entregas con impacto.',
+    focusAreas: [
+      'Full stack web — Angular, Laravel, Node.js, React',
+      'Android — Kotlin, Compose, MVVM, Hilt, Room, Retrofit',
+      'Integraciones — Stripe, Firebase FCM, REST, WebSockets',
+      'DevOps ligero — Docker, GitHub Actions, despliegues',
+      'IA local — LangGraph, Ollama, ChromaDB, RAG',
+    ],
     languages: [
       { name: 'Español', level: 'Nativo' },
       { name: 'Inglés', level: 'A2' },
@@ -104,11 +113,11 @@ export const es: LocaleStrings = {
       id: 'tierra-de-perros',
       company: 'Tierra de Perros',
       location: 'Xalapa, Veracruz',
-      period: 'DIC 2024 — JUN 2025 · 7 meses · contrato finalizado',
-      tags: ['Angular', 'Laravel', 'PWA', 'Stripe'],
+      period: 'DIC 2024 — DIC 2025 · 13 meses · contrato finalizado',
+      tags: ['Angular', 'Laravel', 'PWA', 'Stripe', 'WebSockets', 'FCM'],
       highlights: [
-        'PWA con roles admin, cliente y trabajador.',
-        'Plataforma en operación; sin contrato activo desde jun 2025.',
+        'PWA con roles admin, cliente y trabajador; citas, tienda y pagos Stripe.',
+        'Chat WebSocket, push FCM y JWT. Plataforma en operación; contrato finalizado dic 2025.',
       ],
     },
     {
@@ -145,12 +154,41 @@ export const es: LocaleStrings = {
     },
   ],
   skillGroups: [
-    { id: 'languages', title: 'Lenguajes', items: ['Java', 'Kotlin', 'Python', 'C#', 'JavaScript', 'TypeScript', 'PHP'] },
-    { id: 'frameworks', title: 'Frameworks', items: ['Angular', 'Laravel', 'React', 'Jetpack Compose', 'Spring Boot', 'Node.js', 'Godot'] },
-    { id: 'databases', title: 'Bases de datos', items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Room', 'CouchDB'] },
-    { id: 'practices', title: 'Prácticas', items: ['MVVM', 'Clean Code', 'Inyección de dependencias', 'Patrones de diseño', 'REST API'] },
-    { id: 'tools', title: 'Herramientas', items: ['Android Studio', 'VS Code', 'Git', 'Docker', 'Figma', 'IntelliJ'] },
-    { id: 'security', title: 'Seguridad', items: ['JWT', 'RBAC', 'Encriptación', 'Tokenización'] },
+    {
+      id: 'languages',
+      title: 'Lenguajes',
+      items: ['Java', 'Kotlin', 'Python', 'C#', 'JavaScript', 'TypeScript', 'PHP', 'GDScript'],
+    },
+    {
+      id: 'frameworks',
+      title: 'Frameworks & runtimes',
+      items: ['Angular', 'Laravel', 'React', 'Node.js', 'Express', 'Jetpack Compose', 'Spring Boot', 'Svelte', 'Godot'],
+    },
+    {
+      id: 'databases',
+      title: 'Bases de datos',
+      items: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Room', 'CouchDB'],
+    },
+    {
+      id: 'integrations',
+      title: 'Integraciones',
+      items: ['Stripe', 'Firebase FCM', 'WebSockets', 'REST API', 'JWT', 'Obsidian API'],
+    },
+    {
+      id: 'practices',
+      title: 'Arquitectura & prácticas',
+      items: ['MVVM', 'Clean Architecture', 'Repository', 'Inyección de dependencias', 'Patrones de diseño', 'Event-driven'],
+    },
+    {
+      id: 'tools',
+      title: 'Herramientas & DevOps',
+      items: ['Git', 'GitHub Actions', 'Docker', 'Android Studio', 'VS Code', 'IntelliJ', 'Vite', 'Gradle', 'Figma'],
+    },
+    {
+      id: 'ai',
+      title: 'IA & automatización',
+      items: ['LangGraph', 'Ollama', 'ChromaDB', 'RAG', 'LangChain'],
+    },
   ],
   projects: [
     {
@@ -168,10 +206,10 @@ export const es: LocaleStrings = {
     {
       id: 'tierra-de-perros',
       title: 'Tierra de Perros',
-      description: 'PWA entregada: citas, tienda, Stripe y roles. Angular + Laravel. Proyecto en operación.',
-      period: '2024–2025 · 7 meses · entregado',
+      description: 'PWA entregada: citas, tienda, Stripe, chat y roles. Angular + Laravel. Sigue en operación.',
+      period: '2024–2025 · 13 meses · entregado',
       categories: ['web'],
-      technologies: ['Angular', 'Laravel', 'Stripe', 'MySQL', 'FCM'],
+      technologies: ['Angular', 'Laravel', 'Stripe', 'MySQL', 'FCM', 'WebSockets'],
       patterns: ['RBAC', 'JWT', 'WebSockets'],
       featured: true,
       status: 'production',
