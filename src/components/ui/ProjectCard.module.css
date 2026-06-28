@@ -54,17 +54,18 @@
 }
 
 .card:has(.thumb) .header,
-.card:has(.thumb) .section,
-.card:has(.thumb) .links {
+.hasThumb .header,
+.hasThumb .section,
+.hasThumb .links {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.card:has(.thumb) {
+.hasThumb {
   padding: 0 0 1.25rem;
 }
 
-.card:has(.thumb) .header {
+.hasThumb .header {
   padding-top: 1.25rem;
 }
 

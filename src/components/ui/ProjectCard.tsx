@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { CSSProperties } from 'react';
 import type { Project } from '../../types';
 import { CATEGORY_ACCENTS } from '../../data/categories';
@@ -13,20 +14,28 @@ interface ProjectCardProps {
 export function ProjectCard({ project, compact = false }: ProjectCardProps) {
   const { t } = useLanguage();
   const labels = t.sections.projects;
+  const [imageFailed, setImageFailed] = useState(false);
   const primaryCategory = project.categories[0];
   const accent = CATEGORY_ACCENTS[primaryCategory] ?? '#f0f0f5';
-  const imageSrc = project.imageUrl
-    ? `${import.meta.env.BASE_URL}${project.imageUrl.replace(/^\//, '')}`
-    : null;
+  const imageSrc =
+    project.imageUrl && !imageFailed
+      ? `${import.meta.env.BASE_URL}${project.imageUrl.replace(/^\//, '')}`
+      : null;
 
   return (
     <article
-      className={`${styles.card} ${project.featured && !compact ? styles.featured : ''} ${compact ? styles.compact : ''}`}
+      className={`${styles.card} ${project.featured && !compact ? styles.featured : ''} ${compact ? styles.compact : ''} ${imageSrc ? styles.hasThumb : ''}`}
       style={{ '--card-accent': accent } as CSSProperties}
     >
       {imageSrc && (
         <div className={styles.thumb}>
-          <img src={imageSrc} alt="" loading="lazy" decoding="async" />
+          <img
+            src={imageSrc}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            onError={() => setImageFailed(true)}
+          />
         </div>
       )}
 
