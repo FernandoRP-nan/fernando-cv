@@ -51,6 +51,8 @@ export interface Project {
   patterns: string[];
   repoUrl?: string;
   demoUrl?: string;
+  /** Código privado: no enlazar repo; mostrar badge en CV */
+  visibility?: 'public' | 'private';
   featured: boolean;
   status: 'production' | 'active' | 'archived' | 'learning';
 }

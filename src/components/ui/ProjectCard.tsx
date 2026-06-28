@@ -31,6 +31,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               {categoryMap[cat]?.label}
             </Chip>
           ))}
+          {project.visibility === 'private' && (
+            <Chip accent="#fbbf24">Código privado</Chip>
+          )}
           <span className={styles.status}>{statusLabels[project.status]}</span>
         </div>
         <h3 className={styles.title}>{project.title}</h3>
@@ -70,7 +73,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
           {project.demoUrl && (
             <a href={project.demoUrl} target="_blank" rel="noreferrer" className={styles.link}>
-              Demo →
+              {project.visibility === 'private' ? 'Solicitar demo →' : 'Demo →'}
             </a>
           )}
         </div>
