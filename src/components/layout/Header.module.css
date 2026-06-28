@@ -68,3 +68,36 @@
   border-color: var(--accent);
   color: var(--accent);
 }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.langSwitch {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.langSwitch button {
+  padding: 0.4rem 0.55rem;
+  border: none;
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.langSwitch button:hover {
+  color: var(--text-primary);
+}
+
+.langActive {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent) !important;
+}

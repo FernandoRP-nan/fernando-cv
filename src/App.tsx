@@ -6,11 +6,12 @@ import { Experience } from './components/sections/Experience';
 import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
+import { LanguageProvider } from './i18n/LanguageProvider';
 import './styles/global.css';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <div className="noise" aria-hidden="true" />
       <div className="container">
         <Header />
@@ -24,7 +25,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </LanguageProvider>
   );
 }
 

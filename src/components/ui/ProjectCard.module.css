@@ -58,6 +58,13 @@
   letter-spacing: -0.01em;
 }
 
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
 .description {
   color: var(--text-secondary);
   line-height: 1.65;

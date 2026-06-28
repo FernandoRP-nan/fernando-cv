@@ -1,8 +1,14 @@
-import { profile } from '../../data/profile';
+import { useLanguage } from '../../i18n/LanguageProvider';
 import styles from './Hero.module.css';
 
+const PDF_PATHS = {
+  es: `${import.meta.env.BASE_URL}cv/Fernando-Rodriguez-Prianti-CV.pdf`,
+  en: `${import.meta.env.BASE_URL}cv/Fernando-Rodriguez-Prianti-CV-en.pdf`,
+};
+
 export function Hero() {
-  const initials = profile.name
+  const { locale, t } = useLanguage();
+  const initials = t.profile.name
     .split(' ')
     .map((part) => part[0])
     .slice(0, 2)
@@ -11,46 +17,42 @@ export function Hero() {
   return (
     <section className={styles.hero} id="inicio">
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Portfolio & CV interactivo</p>
+        <p className={styles.eyebrow}>{t.hero.eyebrow}</p>
         <h1 className={styles.name}>
           Fernando
           <span className={styles.surname}> Rodríguez Prianti</span>
         </h1>
-        <p className={styles.role}>{profile.role}</p>
-        <p className={styles.summary}>{profile.summary}</p>
+        <p className={styles.role}>{t.hero.role}</p>
+        <p className={styles.summary}>{t.hero.summary}</p>
 
         <div className={styles.actions}>
           <a href="#proyectos" className={styles.primary}>
-            Ver proyectos
+            {t.hero.ctaProjects}
           </a>
-          <a href={`mailto:${profile.email}`} className={styles.secondary}>
-            Contactar
+          <a href={`mailto:${t.profile.email}`} className={styles.secondary}>
+            {t.hero.ctaContact}
+          </a>
+          <a href={PDF_PATHS[locale]} download className={styles.pdf}>
+            {t.hero.ctaPdf}
           </a>
         </div>
 
         <div className={styles.stats}>
-          <div>
-            <strong>4+</strong>
-            <span>Años de experiencia</span>
-          </div>
-          <div>
-            <strong>15+</strong>
-            <span>Proyectos destacados</span>
-          </div>
-          <div>
-            <strong>8</strong>
-            <span>Stack principal</span>
-          </div>
+          {t.hero.stats.map((stat) => (
+            <div key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
 
       <div className={styles.visual} aria-hidden="true">
         <div className={styles.avatar}>{initials}</div>
         <div className={styles.orbit}>
-          <span>Kotlin</span>
-          <span>Angular</span>
-          <span>Godot</span>
-          <span>Python</span>
+          {t.hero.orbit.map((tech) => (
+            <span key={tech}>{tech}</span>
+          ))}
         </div>
       </div>
     </section>

@@ -1,15 +1,21 @@
-import type { CategoryMeta } from '../types';
+import type { ProjectCategory } from '../types';
 
-export const CATEGORIES: CategoryMeta[] = [
-  { id: 'all', label: 'Todos', accent: '#f0f0f5' },
-  { id: 'android', label: 'Android', accent: '#3ddc84' },
-  { id: 'web', label: 'Web', accent: '#61dafb' },
-  { id: 'games', label: 'Juegos', accent: '#ff6b9d' },
-  { id: 'ai', label: 'IA / Algoritmos', accent: '#a78bfa' },
-  { id: 'tools', label: 'Herramientas', accent: '#fbbf24' },
-  { id: 'patterns', label: 'Patrones', accent: '#fb923c' },
+/** Colores por categoría (independientes del idioma) */
+export const CATEGORY_ACCENTS: Record<ProjectCategory, string> = {
+  all: '#f0f0f5',
+  android: '#3ddc84',
+  web: '#61dafb',
+  games: '#ff6b9d',
+  ai: '#a78bfa',
+  tools: '#fbbf24',
+  patterns: '#fb923c',
+};
+
+export const CATEGORY_IDS: Exclude<ProjectCategory, 'all'>[] = [
+  'android',
+  'web',
+  'games',
+  'ai',
+  'tools',
+  'patterns',
 ];
-
-export const categoryMap = Object.fromEntries(
-  CATEGORIES.map((category) => [category.id, category]),
-) as Record<string, CategoryMeta>;

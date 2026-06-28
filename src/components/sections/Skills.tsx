@@ -1,18 +1,17 @@
-import { skillGroups } from '../../data/skills';
+import { useLanguage } from '../../i18n/LanguageProvider';
 import { SectionTitle } from '../ui/SectionTitle';
 import styles from './Skills.module.css';
 
 export function Skills() {
+  const { t } = useLanguage();
+  const { skills } = t.sections;
+
   return (
     <section className={styles.section} id="skills">
-      <SectionTitle
-        index="03"
-        title="Stack técnico"
-        subtitle="Tecnologías, herramientas y modelos que aplico en producción y proyectos personales."
-      />
+      <SectionTitle index="03" title={skills.title} subtitle={skills.subtitle} />
 
       <div className={styles.grid}>
-        {skillGroups.map((group) => (
+        {t.skillGroups.map((group) => (
           <article key={group.id} className={styles.card}>
             <h3>{group.title}</h3>
             <div className={styles.items}>

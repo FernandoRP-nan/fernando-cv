@@ -46,12 +46,13 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  /** Tiempo activo o en producción, p. ej. "2024 · 4 meses" */
+  period?: string;
   categories: Exclude<ProjectCategory, 'all'>[];
   technologies: string[];
   patterns: string[];
   repoUrl?: string;
   demoUrl?: string;
-  /** Código privado: no enlazar repo; mostrar badge en CV */
   visibility?: 'public' | 'private';
   featured: boolean;
   status: 'production' | 'active' | 'archived' | 'learning';

@@ -1,4 +1,4 @@
-import { projects } from '../../data/projects';
+import { useLanguage } from '../../i18n/LanguageProvider';
 import { useProjectFilter } from '../../hooks/useProjectFilter';
 import { FilterPills } from '../ui/FilterPills';
 import { ProjectCard } from '../ui/ProjectCard';
@@ -6,15 +6,13 @@ import { SectionTitle } from '../ui/SectionTitle';
 import styles from './Projects.module.css';
 
 export function Projects() {
-  const { category, setCategory, filtered, counts } = useProjectFilter(projects);
+  const { t } = useLanguage();
+  const { projects } = t.sections;
+  const { category, setCategory, filtered, counts } = useProjectFilter(t.projects);
 
   return (
     <section className={styles.section} id="proyectos">
-      <SectionTitle
-        index="04"
-        title="Proyectos"
-        subtitle="Filtra por categoría: Android, web, juegos, IA, herramientas y patrones de diseño."
-      />
+      <SectionTitle index="04" title={projects.title} subtitle={projects.subtitle} />
 
       <FilterPills active={category} counts={counts} onChange={setCategory} />
 
@@ -24,9 +22,7 @@ export function Projects() {
         ))}
       </div>
 
-      {filtered.length === 0 && (
-        <p className={styles.empty}>No hay proyectos en esta categoría.</p>
-      )}
+      {filtered.length === 0 && <p className={styles.empty}>{projects.empty}</p>}
     </section>
   );
 }

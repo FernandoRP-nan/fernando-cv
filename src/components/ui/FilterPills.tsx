@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import type { ProjectCategory } from '../../types';
-import { CATEGORIES } from '../../data/categories';
+import { CATEGORY_ACCENTS, CATEGORY_IDS } from '../../data/categories';
+import { useLanguage } from '../../i18n/LanguageProvider';
 import styles from './FilterPills.module.css';
 
 interface FilterPillsProps {
@@ -10,22 +11,26 @@ interface FilterPillsProps {
 }
 
 export function FilterPills({ active, counts, onChange }: FilterPillsProps) {
+  const { t } = useLanguage();
+  const categories: ProjectCategory[] = ['all', ...CATEGORY_IDS];
+
   return (
-    <div className={styles.wrapper} role="tablist" aria-label="Filtrar proyectos">
-      {CATEGORIES.map((category) => {
-        const count = counts[category.id] ?? 0;
-        if (category.id !== 'all' && count === 0) return null;
+    <div className={styles.wrapper} role="tablist" aria-label="Filter projects">
+      {categories.map((id) => {
+        const count = counts[id] ?? 0;
+        if (id !== 'all' && count === 0) return null;
+        const accent = CATEGORY_ACCENTS[id];
 
         return (
           <button
-            key={category.id}
+            key={id}
             role="tab"
-            aria-selected={active === category.id}
-            className={`${styles.pill} ${active === category.id ? styles.active : ''}`}
-            style={{ '--pill-accent': category.accent } as CSSProperties}
-            onClick={() => onChange(category.id)}
+            aria-selected={active === id}
+            className={`${styles.pill} ${active === id ? styles.active : ''}`}
+            style={{ '--pill-accent': accent } as CSSProperties}
+            onClick={() => onChange(id)}
           >
-            {category.label}
+            {t.categories[id]}
             <span className={styles.count}>{count}</span>
           </button>
         );

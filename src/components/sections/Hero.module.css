@@ -80,6 +80,21 @@
   background: color-mix(in srgb, var(--accent) 85%, white);
 }
 
+.pdf {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.15s, border-color 0.2s;
+}
+
+.pdf:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
 .secondary {
   border: 1px solid var(--border);
   color: var(--text-primary);
@@ -129,7 +144,7 @@
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--accent) 0%, #ff6b4a 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #1a6b8a 100%);
   color: var(--bg);
   box-shadow: 0 0 80px color-mix(in srgb, var(--accent) 30%, transparent);
   z-index: 1;

@@ -1,18 +1,17 @@
-import { experiences } from '../../data/experience';
+import { useLanguage } from '../../i18n/LanguageProvider';
 import { SectionTitle } from '../ui/SectionTitle';
 import styles from './Experience.module.css';
 
 export function Experience() {
+  const { t } = useLanguage();
+  const { experience } = t.sections;
+
   return (
     <section className={styles.section} id="experiencia">
-      <SectionTitle
-        index="02"
-        title="Experiencia"
-        subtitle="Trayectoria profesional en empresas, consultoría y desarrollo móvil."
-      />
+      <SectionTitle index="02" title={experience.title} subtitle={experience.subtitle} />
 
       <div className={styles.timeline}>
-        {experiences.map((exp, index) => (
+        {t.experiences.map((exp, index) => (
           <article key={exp.id} className={styles.item}>
             <div className={styles.marker}>
               <span>{String(index + 1).padStart(2, '0')}</span>
