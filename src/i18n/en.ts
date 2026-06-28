@@ -265,7 +265,7 @@ export const en: LocaleStrings = {
       status: 'active',
     },
     {
-      id: 'templete-banco',
+      id: 'uno-bank',
       title: 'Uno Bank',
       description:
         'Fintech mobile app: JWT auth, dashboard, paged movements, biometrics, and security layer with simulated backend.',
@@ -273,12 +273,12 @@ export const en: LocaleStrings = {
       categories: ['android'],
       technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Paging', 'Retrofit', 'Biometric'],
       patterns: ['Clean Architecture', 'MVVM', 'Repository'],
-      repoUrl: 'https://github.com/FernandoRP-nan/templete_banco',
+      repoUrl: 'https://github.com/FernandoRP-nan/uno-bank',
       featured: false,
       status: 'active',
     },
     {
-      id: 'android-template',
+      id: 'cero-peliculas-compose',
       title: 'Cero — Movies & Compose',
       description:
         'Modular Android app: TMDB catalog, Room, Hilt, and NDK module; interactive order UI with Compose animations.',
@@ -286,7 +286,7 @@ export const en: LocaleStrings = {
       categories: ['android'],
       technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Retrofit', 'NDK', 'Coil'],
       patterns: ['Clean Architecture', 'MVVM', 'Repository'],
-      repoUrl: 'https://github.com/FernandoRP-nan/android-template',
+      repoUrl: 'https://github.com/FernandoRP-nan/cero-peliculas-compose',
       featured: false,
       status: 'active',
     },
